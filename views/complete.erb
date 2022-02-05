@@ -41,35 +41,38 @@
         <table class="mt-4 table table-border-bottom">
             <thead>
                 <tr>
-                 <th>送信内容</th>   
+                 <th>送信内容</th>
+                 <!--added empty header to accomodate column-->
+                 <th></th>
                 </tr>
             </thead>
-            <tr>
-                <th>会社名：</th>
-                <% name = params['company'] %>
-                <td><%= name %></td>
-            </tr>
-            <tr>
-                <th>氏名：</th>
-                <% name = params['name'] %>
-                <td><%= name %></td>
-            </tr>
-            <tr>
-                <th>メール：</th>
-                <% name = params['mail'] %>
-                <td><%= name %></td>
-            </tr>
-            <tr>
-                <th>電話番号：</th>
-                <% name = params['tel'] %>
-                <td><%= name %></td>
-            </tr>
-            <tr>
-                <th>内容：</th>
-                <% name = params['content'] %>
-                <td><%= name.gsub(/\R/, '<br>') %></td>
-            </tr>
-                
+            <tbody>
+                <tr>
+                    <th>会社名：</th>
+                    <% name = params['company'] %>
+                    <td><%= name %></td>
+                </tr>
+                <tr>
+                    <th>氏名：</th>
+                    <% name = params['name'] %>
+                    <td><%= name %></td>
+                </tr>
+                <tr>
+                    <th>メール：</th>
+                    <% name = params['mail'] %>
+                    <td><%= name %></td>
+                </tr>
+                <tr>
+                    <th>電話番号：</th>
+                    <% name = params['tel'] %>
+                    <td><%= name %></td>
+                </tr>
+                <tr>
+                    <th>内容：</th>
+                    <% name = params['content'] %>
+                    <td><%= name.gsub(/\R/, '<br>') %></td>
+                </tr>
+            </tbody>    
         </table>
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
